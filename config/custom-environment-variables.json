@@ -1,0 +1,12 @@
+{
+    "NewsApi":{
+        "apiKeyConfig":{
+            "apiKey": "NEWS_API_KEY"
+        }
+    },
+    "WeatherApi":{
+        "apiKeyConfig":{
+            "apiKey": "WEATHER_API_KEY"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "NewsApi":{
+        "apiKeyConfig":{
+            "apiKey": ""
+        }
+    },
+    "WeatherApi":{
+        "apiKeyConfig":{
+            "apiKey": ""
+        }
+    },
+    "JwtToken": "super-secret-token"
+}

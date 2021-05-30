@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "740599c8-8618-472d-b433-839727eb30cb",
+		"name": "news_and_weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"example@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				},
+				"description": "Api to create user. Request body should be provided with email and password."
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"example@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login to get token which will be used to get news data. Response will have JWT."
+			},
+			"response": []
+		},
+		{
+			"name": "/api/weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/weather",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather"
+					]
+				},
+				"description": "This api is used to fetch weather information. No authetication required."
+			},
+			"response": []
+		},
+		{
+			"name": "/api/news",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwiaWF0IjoxNjIyMzc0MTU5LCJleHAiOjE2MjIzNzc3NTl9.8Sof-GnGOj_RAeXzORQtz951V2gIfeLqlI2db9ABCDY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/news?",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"news"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				},
+				"description": "Api to fecth news information. Authorization header is required. Add `Authorization` header with `\"Bearer <token>\"` where token received after login"
+			},
+			"response": []
+		}
+	]
+}
