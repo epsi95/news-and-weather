@@ -18,7 +18,7 @@ const cache = require('express-redis-cache')({ expire: 0.5*60*60 });
 to
 ```
 const cache = require('express-redis-cache')({
-   host: String, port: Number, auth_pass: REDIS_PASSWORD
+   host: String, port: Number, auth_pass: REDIS_PASSWORD, expire: 0.5*60*60 
   });
 ```
 
